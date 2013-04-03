@@ -28,7 +28,7 @@ public class HomeActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Log.e("info", "Food Btn clicked");
+				Log.e("info", "Food Btn clicked1");
 				
 			}
 		});
@@ -39,7 +39,7 @@ public class HomeActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Log.e("info", "Accomadation Btn clicked");
+				Log.e("info", "Accomadation Btn clicked1");
 			}
 		});
         
@@ -49,7 +49,7 @@ public class HomeActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Log.e("info", "Attraction Btn clicked");
+				Log.e("info", "Attraction Btn clicked1");
 			}
 		});
         
@@ -59,7 +59,7 @@ public class HomeActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Log.e("info", "Sshopping Btn clicked");
+				Log.e("info", "Sshopping Btn clicked1");
 			}
 		});
     }

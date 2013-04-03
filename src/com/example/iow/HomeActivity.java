@@ -28,7 +28,7 @@ public class HomeActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Log.e("info", "Food Btn clicked1");
+				Log.e("info", "Food Btn clicked test commit");
 				
 			}
 		});

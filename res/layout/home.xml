@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    tools:context="com.example.iow.HomeActivity" >
+
+    <Button
+        android:id="@+id/attractionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/foodBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/att_places_icon" />
+
+    <Button
+        android:id="@+id/accBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/attractionBtn"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/acc_icon" />
+
+    <Button
+        android:id="@+id/foodBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/accBtn"
+        android:layout_alignBottom="@+id/accBtn"
+        android:layout_marginRight="7dp"
+        android:layout_toLeftOf="@+id/accBtn"
+        android:background="@drawable/food_drink_icon" />
+
+    <Button
+        android:id="@+id/shoppingBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/accBtn"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/shopping_icon" />
+
+</RelativeLayout>

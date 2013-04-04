@@ -37,6 +37,8 @@ public class MainActivity extends TabActivity {
         tabHost.addTab(tab2);
         tabHost.addTab(tab3);
         tabHost.addTab(tab4);
+        
+        tabHost.setCurrentTab(2);
     }
 
 

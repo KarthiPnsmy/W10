@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical">
+ 
+    <!-- Album id / Hidden by default -->
+    <TextView
+        android:text="test0"
+        android:id="@+id/nid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    
+    <TextView
+    	android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:padding="10dip"
+        android:textSize="14sp"
+        android:textColor="#000"
+        android:textStyle="bold" />
+    
+    <ImageView
+	    android:id="@+id/arrow"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:layout_width="48dp"
+	    android:layout_height="fill_parent"/>
+</RelativeLayout>

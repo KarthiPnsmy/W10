@@ -30,37 +30,42 @@ public final class R {
         public static final int back_btn_new=0x7f020003;
         public static final int bg=0x7f020004;
         public static final int bg_header_480_new=0x7f020005;
-        public static final int food_drink_icon=0x7f020006;
-        public static final int getting=0x7f020007;
-        public static final int home_bg=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int icon_getting=0x7f02000a;
-        public static final int icon_getting_config=0x7f02000b;
-        public static final int icon_home=0x7f02000c;
-        public static final int icon_home_config=0x7f02000d;
-        public static final int icon_video=0x7f02000e;
-        public static final int icon_video_config=0x7f02000f;
-        public static final int icon_whatson=0x7f020010;
-        public static final int icon_whatson_config=0x7f020011;
-        public static final int shape=0x7f020012;
-        public static final int shopping_icon=0x7f020013;
+        public static final int fail=0x7f020006;
+        public static final int food_drink_icon=0x7f020007;
+        public static final int getting=0x7f020008;
+        public static final int home_bg=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int icon_getting=0x7f02000b;
+        public static final int icon_getting_config=0x7f02000c;
+        public static final int icon_home=0x7f02000d;
+        public static final int icon_home_config=0x7f02000e;
+        public static final int icon_video=0x7f02000f;
+        public static final int icon_video_config=0x7f020010;
+        public static final int icon_whatson=0x7f020011;
+        public static final int icon_whatson_config=0x7f020012;
+        public static final int shape=0x7f020013;
+        public static final int shopping_icon=0x7f020014;
+        public static final int success=0x7f020015;
     }
     public static final class id {
         public static final int accBtn=0x7f090007;
-        public static final int action_settings=0x7f09000f;
+        public static final int action_settings=0x7f090012;
+        public static final int arrow=0x7f09000e;
         public static final int attractionBtn=0x7f090005;
-        public static final int backBtn=0x7f09000d;
+        public static final int backBtn=0x7f090010;
         public static final int button1=0x7f090000;
         public static final int button2=0x7f090002;
         public static final int button3=0x7f090003;
         public static final int foodBtn=0x7f090006;
         public static final int label=0x7f09000a;
-        public static final int list=0x7f09000c;
-        public static final int navTitle=0x7f09000e;
+        public static final int list=0x7f09000f;
+        public static final int navTitle=0x7f090011;
+        public static final int nid=0x7f09000c;
         public static final int option_icon=0x7f09000b;
         public static final int rellay=0x7f090009;
         public static final int shoppingBut=0x7f090008;
         public static final int textView1=0x7f090001;
+        public static final int titleTxt=0x7f09000d;
         public static final int webView1=0x7f090004;
     }
     public static final class layout {
@@ -68,8 +73,9 @@ public final class R {
         public static final int getting_here=0x7f030001;
         public static final int home=0x7f030002;
         public static final int list_item=0x7f030003;
-        public static final int whatson=0x7f030004;
-        public static final int whatson_list=0x7f030005;
+        public static final int list_item_watson=0x7f030004;
+        public static final int whatson=0x7f030005;
+        public static final int whatson_list=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f080000;

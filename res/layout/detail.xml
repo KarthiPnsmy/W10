@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:background="@drawable/bg_header_480_new"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/backBtn"
+            android:onClick="closeWin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_btn_new" />
+
+        <TextView
+            android:id="@+id/navTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff" />
+                
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="Button" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/shape" 
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+		        android:layout_margin="2dp"
+                android:orientation="vertical" >
+                
+			        <TextView
+			            android:id="@+id/subTitle"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:textSize="15sp"
+			            android:textStyle="bold"
+			            android:textColor="#000" />
+			        
+			        <ImageView
+			            android:id="@+id/itmImage"
+			            android:layout_width="match_parent"
+			            android:layout_height="120dp"
+			            android:layout_marginTop="10dp"
+			            android:layout_marginLeft="1dp"
+			            android:layout_marginRight="1dp"
+			            android:src="@drawable/no_image" />
+			        
+			        <TextView
+			            android:id="@+id/descText"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_marginTop="10dp"
+			            android:textSize="12sp"
+			            android:textColor="#000" />
+
+		            <LinearLayout
+		                android:layout_width="fill_parent"
+		                android:layout_height="50dp"
+				        android:layout_marginTop="10dp"
+		                android:orientation="horizontal" >
+		                
+					        <Button
+					            android:id="@+id/callBtn"
+					            android:onClick="doCall"
+					            android:layout_width="27dp"
+					            android:layout_height="47dp"
+					            android:background="@drawable/call_icon" />
+
+					        <Button
+					            android:id="@+id/mapBtn"
+					            android:onClick="goToMap"
+					            android:layout_width="29dp"
+					            android:layout_height="47dp"
+					            android:layout_marginLeft="20dp"
+					            android:background="@drawable/map_icon" />
+					        
+					        <Button
+					            android:id="@+id/emailBtn"
+					            android:onClick="doEmail"
+					            android:layout_width="30dp"
+					            android:layout_height="47dp"
+					            android:layout_marginLeft="20dp"
+					            android:background="@drawable/email_icon" />
+		            </LinearLayout>
+			        
+			        
+            </LinearLayout>
+        </ScrollView>
+
+	    </RelativeLayout>
+ 
+</LinearLayout>

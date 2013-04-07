@@ -20,6 +20,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -93,12 +95,32 @@ public class WhatsOnListActivity extends ListActivity {
 		// Loading Albums JSON in Background Thread
 		new LoadWhatson().execute();
 		
-		// get listview
 		ListView lv = getListView();
+		
+        lv.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				// TODO Auto-generated method stub
+				String nodeId = ((TextView) view.findViewById(R.id.nid)).getText().toString();
+				Log.i("mnTxt", nodeId);
+				Log.i("mnTxt", "position = "+position);
+				Log.i("mnTxt", "id = "+id);
+				
+				Intent i = new Intent(getBaseContext(), DetailActivity.class);
+				i.putExtra("nodeId", nodeId);
+				startActivity(i);
+			}
+		});
+		
     }
 	
-	
-
+	/*
+	 @Override
+	 public void onListItemClick(ListView l, View v, int position, long id) {
+		 	Toast.makeText(this, "item clicked "+position, Toast.LENGTH_SHORT).show();
+	 }
+    */
 	/**
 	 * Background Async Task to Load all Albums by making http request
 	 * */

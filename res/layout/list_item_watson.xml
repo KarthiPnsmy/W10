@@ -4,7 +4,7 @@
     android:background="#fff"
     android:orientation="vertical">
  
-    <!-- Album id / Hidden by default -->
+    <!-- Node id / Hidden by default -->
     <TextView
         android:text="test0"
         android:id="@+id/nid"

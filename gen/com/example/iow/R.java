@@ -54,8 +54,8 @@ public final class R {
     }
     public static final class id {
         public static final int accBtn=0x7f090010;
-        public static final int action_settings=0x7f09001a;
-        public static final int arrow=0x7f090017;
+        public static final int action_settings=0x7f09001e;
+        public static final int arrow=0x7f09001b;
         public static final int attractionBtn=0x7f09000e;
         public static final int backBtn=0x7f090000;
         public static final int button1=0x7f09000a;
@@ -64,21 +64,25 @@ public final class R {
         public static final int callBtn=0x7f090007;
         public static final int descText=0x7f090006;
         public static final int emailBtn=0x7f090009;
+        public static final int flashUrl=0x7f090018;
         public static final int foodBtn=0x7f09000f;
         public static final int itmImage=0x7f090005;
         public static final int label=0x7f090013;
-        public static final int list=0x7f090019;
+        public static final int list=0x7f09001d;
+        public static final int list_image=0x7f090016;
         public static final int mapBtn=0x7f090008;
-        public static final int mapview=0x7f090018;
+        public static final int mapview=0x7f09001c;
         public static final int navTitle=0x7f090001;
-        public static final int nid=0x7f090015;
+        public static final int nid=0x7f090019;
         public static final int option_icon=0x7f090014;
         public static final int rellay=0x7f090012;
         public static final int scrollView1=0x7f090003;
         public static final int shoppingBut=0x7f090011;
         public static final int subTitle=0x7f090004;
         public static final int textView1=0x7f09000b;
-        public static final int titleTxt=0x7f090016;
+        public static final int thumbnail=0x7f090015;
+        public static final int title=0x7f090017;
+        public static final int titleTxt=0x7f09001a;
         public static final int webView1=0x7f09000d;
     }
     public static final class layout {
@@ -87,10 +91,12 @@ public final class R {
         public static final int getting_here=0x7f030002;
         public static final int home=0x7f030003;
         public static final int list_item=0x7f030004;
-        public static final int list_item_watson=0x7f030005;
-        public static final int map=0x7f030006;
-        public static final int whatson=0x7f030007;
-        public static final int whatson_list=0x7f030008;
+        public static final int list_item_video=0x7f030005;
+        public static final int list_item_watson=0x7f030006;
+        public static final int map=0x7f030007;
+        public static final int video_list=0x7f030008;
+        public static final int whatson=0x7f030009;
+        public static final int whatson_list=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;

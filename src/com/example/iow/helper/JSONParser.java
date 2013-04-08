@@ -84,7 +84,6 @@ public class JSONParser {
 		} catch (Exception e) {
 			Log.e("Buffer Error", "Error converting result " + e.toString());
 		}
-
 		// return JSON String
 		return json;
 

@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header_480_new" >
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="54dp"
+            android:layout_height="31dp"
+            android:background="@drawable/back_btn_new" />
+
+        <TextView
+            android:id="@+id/navTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Videos"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#fff" >
+		    <ListView
+		        android:id="@android:id/list"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		    	android:divider="#b5b5b5"
+		        android:dividerHeight="1dp"
+		        android:cacheColorHint="#00000000"/>
+	</LinearLayout>
+
+</LinearLayout>

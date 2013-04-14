@@ -58,6 +58,7 @@ public class LazyAdapter extends BaseAdapter {
         vUrl.setText(song.get("flashUrl"));
         node.setText(song.get("nid"));
         imageLoader.DisplayImage(song.get("thumbnailUrl"), thumb_image);
+        Log.d("adptr", "inside adapter");
         
         return vi;
     }

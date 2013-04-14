@@ -29,6 +29,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -59,7 +61,7 @@ public class VideoActivity extends Activity{
 	private static final String TAG_THUMB_URI = "thumbnail";
 	private static final String TAG_VIDEO_URI = "url";
 
-	ListView list;
+	ListView lv;
     LazyAdapter adapter;
     
 	@Override
@@ -71,38 +73,36 @@ public class VideoActivity extends Activity{
 		tView.setText("Video Window");
 		//setContentView(tView);
 		setContentView(R.layout.video_list);
-		list = (ListView)findViewById(R.id.list);
-		
-        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+		lv = (ListView) findViewById(R.id.vlist);
+		Log.d("lv", "lv = "+lv);
         
-        // Check for internet connection
-        if (!cd.isConnectingToInternet()) {
-            // Internet Connection is not present
-            alert.showAlertDialog(VideoActivity.this, "Internet Connection Error",
-                    "Please connect to working Internet connection", false);
-            // stop executing code by return
-            return;
-        }
-        
-
-		// Hashmap for ListView
-        videoList = new ArrayList<HashMap<String, String>>();
-
-		// Loading Albums JSON in Background Thread
-		new LoadVideos().execute();
+		// Loading Video JSON in Background Thread
+		new LoadVideos(this).execute();
 	}
 
-    public void runOnPostExecute(){
-        // whatever
-	    adapter=new LazyAdapter(this, videoList);        
-	    list.setAdapter(adapter);
-    }
-    
+	public void showUI() {
+	      Toast
+	        .makeText(VideoActivity.this, this.toString(), Toast.LENGTH_LONG)
+	        .show();
+	      Log.d("adptr", "b4 videoList = "+videoList.toString());
+	      LazyAdapter tadapter = new LazyAdapter(VideoActivity.this, videoList);  
+	      Log.d("adptr", "tadapter = "+tadapter.toString());
+	      Log.d("adptr", "lv = "+lv.toString());
+	      lv.setAdapter(tadapter);
+	}
+	
 	/**
 	 * Background Async Task to Load all Albums by making http request
 	 * */
 	class LoadVideos extends AsyncTask<String, String, String> {
 
+	   public VideoActivity myactivity;
+
+	   public LoadVideos(VideoActivity a)
+	    {
+		   myactivity = a;
+	    }
+		    
 		/**
 		 * Before starting background thread Show Progress Dialog
 		 * */
@@ -170,6 +170,14 @@ public class VideoActivity extends Activity{
 	    		                JSONArray urlArr = new JSONArray(field_video_url);
 	    		                JSONObject urlData = new JSONObject(urlArr.get(0).toString());
 
+	    		                //fetch duration
+	    		                String durationStr = urlData.get("data").toString();
+	    		                JSONObject durationObj = new JSONObject(durationStr.toString());
+	    		                String duration = durationObj.get("duration").toString();;
+	    		                Log.i("Http Response:13", "duration in seconds = " + duration.toString());
+	    		                Float vMin = (float)Math.round(Integer.parseInt(duration) * 10) / 10;
+	    		                Log.i("Http Response:13a", "duration in min = " + vMin.toString());
+	    		                
 	    		                //fetch thumbnailUrl
 	    		                String dataStr = urlData.get("data").toString();
 	    		                JSONObject dataObj = new JSONObject(dataStr.toString());
@@ -228,10 +236,11 @@ public class VideoActivity extends Activity{
 		 * **/
 		protected void onPostExecute(String file_url) {
 			// dismiss the dialog after getting all albums
-			pDialog.dismiss();
-			runOnPostExecute();
-			// updating UI from Background Thread
+			  pDialog.dismiss();
+		      Toast.makeText(VideoActivity.this, "Done! = "+videoList.toString(), Toast.LENGTH_LONG).show();
+		      myactivity.showUI();
 		}
 
 	}
+   
 }

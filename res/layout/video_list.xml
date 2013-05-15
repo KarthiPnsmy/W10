@@ -10,12 +10,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_header_480_new" >
 
-        <Button
-            android:id="@+id/backBtn"
-            android:layout_width="54dp"
-            android:layout_height="31dp"
-            android:background="@drawable/back_btn_new" />
-
         <TextView
             android:id="@+id/navTitle"
             android:layout_width="wrap_content"

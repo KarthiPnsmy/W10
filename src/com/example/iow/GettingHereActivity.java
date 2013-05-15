@@ -32,7 +32,6 @@ public class GettingHereActivity extends Activity
 	// Creating JSON Parser object
 	JSONParser jsonParser = new JSONParser();
 	WebView myWebView;
-    String html = "<html><body>Hello, World!</body></html>";
     String mime = "text/html";
     String encoding = "utf-8";
     

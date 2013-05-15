@@ -56,7 +56,7 @@ public class LazyAdapter extends BaseAdapter {
         // Setting all values in listview
         title.setText(song.get("title"));
         vUrl.setText(song.get("flashUrl"));
-        node.setText(song.get("nid"));
+        node.setText(song.get("videoDuration"));
         imageLoader.DisplayImage(song.get("thumbnailUrl"), thumb_image);
         Log.d("adptr", "inside adapter");
         

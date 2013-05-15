@@ -170,13 +170,21 @@ public class VideoActivity extends Activity{
 	    		                JSONArray urlArr = new JSONArray(field_video_url);
 	    		                JSONObject urlData = new JSONObject(urlArr.get(0).toString());
 
-	    		                //fetch duration
-	    		                String durationStr = urlData.get("data").toString();
-	    		                JSONObject durationObj = new JSONObject(durationStr.toString());
-	    		                String duration = durationObj.get("duration").toString();;
-	    		                Log.i("Http Response:13", "duration in seconds = " + duration.toString());
-	    		                Float vMin = (float)Math.round(Integer.parseInt(duration) * 10) / 10;
-	    		                Log.i("Http Response:13a", "duration in min = " + vMin.toString());
+                                //fetch duration
+                                String durationStr = urlData.get("data").toString();
+                                JSONObject durationObj = new JSONObject(durationStr.toString());
+                                String duration = durationObj.get("duration").toString();;
+                                Log.i("Http Response:13", "duration in seconds = " + duration.toString());
+                                Integer vMin = (Integer)Math.round((Integer.parseInt(duration)/60));
+                                Integer vSec =  (Integer.parseInt(duration)%60);
+                               
+                                String videoDuration;
+                                if(vSec<10){
+                                    videoDuration = vMin.toString()+":0"+ vSec.toString();
+                                }else{
+                                    videoDuration = vMin.toString()+":"+vSec.toString();
+                                }
+                                Log.i("Http Response:13a", "duration in seconds videoDuration = "+ videoDuration);
 	    		                
 	    		                //fetch thumbnailUrl
 	    		                String dataStr = urlData.get("data").toString();
@@ -199,6 +207,7 @@ public class VideoActivity extends Activity{
 	    		    			map.put("title", sTitle);
 	    		    			map.put("thumbnailUrl", thumbnailUrl);
 	    		    			map.put("flashUrl", flashUrl);
+	    		    			map.put("videoDuration", videoDuration);
 
 	    		    			// adding HashList to ArrayList
 	    		    			videoList.add(map);
